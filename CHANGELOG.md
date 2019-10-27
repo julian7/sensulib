@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+No changes so far.
+
+## [v0.1.1] - Oct 27, 2019
+
 Fixes:
 
 * mage/asset package name was still showing "sensuasset", from before the code separation.
@@ -16,4 +20,5 @@ Fixes:
 Initial release.
 
 [Unreleased]: https://github.com/julian7/sensulib
+[v0.1.1]: https://github.com/julian7/sensulib/releases/tag/v0.1.1
 [v0.1.0]: https://github.com/julian7/sensulib/releases/tag/v0.1.0
