@@ -1,1 +1,1 @@
-package sensuasset
+package asset

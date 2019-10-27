@@ -1,4 +1,4 @@
-package sensuasset
+package asset
 
 import (
 	"archive/tar"

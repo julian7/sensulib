@@ -1,4 +1,4 @@
-package sensuasset
+package asset
 
 import (
 	"github.com/julian7/sensulib/mage/target"
