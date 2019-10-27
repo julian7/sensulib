@@ -9,6 +9,16 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 No changes so far.
 
+## [v0.1.2] - Oct 27, 2019
+
+Changes:
+
+* better filenames for mage/asset
+
+Fixes:
+
+* `asset.NewTarget()` never filled ArchiveName, therefore it rendered as empty string for `asset.Target.Summarize()`.
+
 ## [v0.1.1] - Oct 27, 2019
 
 Fixes:

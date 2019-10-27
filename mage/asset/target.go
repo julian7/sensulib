@@ -49,6 +49,7 @@ func NewTarget(conf *Config, bldTarget *target.Target) (*Target, error) {
 	if err != nil {
 		return nil, fmt.Errorf("cannot build new target: %w", err)
 	}
+	tmplSpec.ArchiveName = t.archivefile
 
 	t.url, err = tmplSpec.Parse("url", t.ReleaseURL)
 	if err != nil {
