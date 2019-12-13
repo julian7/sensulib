@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+No changes so far.
+
+## [v0.2.1] - Dec 13, 2019
+
 Fixed:
 
 * Removed go.sum
@@ -44,6 +48,7 @@ Fixes:
 Initial release.
 
 [Unreleased]: https://github.com/julian7/sensulib
+[v0.2.1]: https://github.com/julian7/sensulib/releases/tag/v0.2.1
 [v0.2.0]: https://github.com/julian7/sensulib/releases/tag/v0.2.0
 [v0.1.3]: https://github.com/julian7/sensulib/releases/tag/v0.1.3
 [v0.1.2]: https://github.com/julian7/sensulib/releases/tag/v0.1.2
