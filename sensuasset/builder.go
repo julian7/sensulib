@@ -1,6 +1,7 @@
 package sensuasset
 
 import (
+	"context"
 	"crypto/sha512"
 	"fmt"
 	"io"
@@ -32,7 +33,7 @@ type Asset struct {
 
 func Register() {
 	modules.RegisterModule(&modules.ModuleRegistration{
-		Stage:   "archive",
+		Stage:   "build",
 		Type:    "sensu-asset",
 		Factory: NewAsset,
 	})
@@ -45,11 +46,19 @@ func NewAsset() modules.Pluggable {
 	}
 }
 
-func (mod *Asset) Run(context *ctx.Context) error {
+func (mod *Asset) Run(cx context.Context) error {
+	context, err := ctx.GetShipContext(cx)
+	if err != nil {
+		return fmt.Errorf("sensu-asset run: %w", err)
+	}
+
 	assetspec := NewAssetSpec(context.ProjectName)
 	builds := context.Artifacts.ByID(mod.Build)
 
-	td := modules.NewTemplate(context)
+	td, err := modules.NewTemplate(cx)
+	if err != nil {
+		return fmt.Errorf("sensu-asset template: %w", err)
+	}
 
 	outfile, err := td.Parse("sensu-asset:outfile", mod.Output)
 	if err != nil {
