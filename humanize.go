@@ -12,6 +12,10 @@ func logn(n, b float64) float64 {
 
 // SizeToHuman converts byte size to IEC size string
 func SizeToHuman(size uint64) string {
+	if size == 0 {
+		return "0 B"
+	}
+
 	var precision int
 
 	prefixes := []string{"B", "KiB", "MiB", "GiB", "TiB", "PiB", "EiB"}

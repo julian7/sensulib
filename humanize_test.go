@@ -13,6 +13,7 @@ func TestSizeToHuman(t *testing.T) {
 		size uint64
 		want string
 	}{
+		{"no bytes", 0, "0 B"},
 		{"low bytes", 5, "5 B"},
 		{"bytes", 55, "55 B"},
 		{"low kilobytes", 1800, "1.8 KiB"},
