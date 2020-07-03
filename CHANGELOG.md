@@ -11,6 +11,10 @@ Added:
 
 * Basic metrics API for emitting data in [OpenTSDB](http://opentsdb.net/) format
 
+Changed:
+
+* Updated dependencies (most importantly cobra 1.0.0)
+
 ## [v0.2.2] - Feb 10, 2020
 
 Fixed:
