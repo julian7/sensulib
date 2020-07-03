@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+No changes so far.
+
+## [v0.3.0] - Jul 3, 2020
+
 Added:
 
 * Basic metrics API for emitting data in [OpenTSDB](http://opentsdb.net/) format
@@ -60,6 +64,7 @@ Fixes:
 Initial release.
 
 [Unreleased]: https://github.com/julian7/sensulib
+[v0.3.0]: https://github.com/julian7/sensulib/releases/tag/v0.3.0
 [v0.2.2]: https://github.com/julian7/sensulib/releases/tag/v0.2.2
 [v0.2.1]: https://github.com/julian7/sensulib/releases/tag/v0.2.1
 [v0.2.0]: https://github.com/julian7/sensulib/releases/tag/v0.2.0
