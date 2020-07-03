@@ -7,7 +7,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-No changes so far.
+Added:
+
+* Basic metrics API for emitting data in [OpenTSDB](http://opentsdb.net/) format
 
 ## [v0.2.2] - Feb 10, 2020
 
