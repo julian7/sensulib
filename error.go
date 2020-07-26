@@ -1,6 +1,7 @@
 package sensulib
 
 import (
+	"errors"
 	"fmt"
 )
 
@@ -30,29 +31,46 @@ func (serr *Error) Exit() {
 	Exit(serr.criticality)
 }
 
+func args2err(args []interface{}) error {
+	switch len(args) {
+	case 0:
+		return errors.New("(no message)")
+	case 1:
+		if errarg, ok := args[0].(error); ok {
+			return errarg
+		} else if errarg, ok := args[0].(string); ok {
+			return errors.New(errarg)
+		} else {
+			return fmt.Errorf("%v", args[0])
+		}
+	}
+	return fmt.Errorf(args[0].(string), args[1:]...)
+}
+
 // NewError creates a new Error
-func NewError(crit int, err error) *Error {
+func NewError(crit int, args ...interface{}) *Error {
+	err := args2err(args)
 	return &Error{criticality: crit, err: err}
 }
 
 // Warn creates a Warning-level error
-func Warn(err error) *Error {
-	return NewError(WARN, err)
+func Warn(args ...interface{}) *Error {
+	return NewError(WARN, args...)
 }
 
 // Crit creates a Critical-level error
-func Crit(err error) *Error {
-	return NewError(CRIT, err)
+func Crit(args ...interface{}) *Error {
+	return NewError(CRIT, args...)
 }
 
 // Ok creates a OK-level error
-func Ok(err error) *Error {
-	return NewError(OK, err)
+func Ok(args ...interface{}) *Error {
+	return NewError(OK, args...)
 }
 
 // Unknown creates a Unknown-level error
-func Unknown(err error) *Error {
-	return NewError(UNKNOWN, err)
+func Unknown(args ...interface{}) *Error {
+	return NewError(UNKNOWN, args...)
 }
 
 func (serr *Error) critString() string {

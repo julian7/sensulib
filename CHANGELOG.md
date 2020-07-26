@@ -7,7 +7,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-No changes so far.
+Added:
+
+* New error API: `NewError`, and derivatives (`Ok()`, `Warn()`, `Crit()`, `Unknown()`) can take multiple arguments instead of a single error: single string, single value (printed with %v), or `fmt.Errorf()` arguments
 
 ## [v0.3.0] - Jul 3, 2020
 

@@ -42,3 +42,35 @@ func TestError_Error(t *testing.T) {
 		})
 	}
 }
+
+func TestNewError(t *testing.T) {
+	tests := []struct {
+		name    string
+		crit    int
+		fields  []interface{}
+		message string
+	}{
+		{"empty", 1, []interface{}{}, "WARNING: (no message)"},
+		{"string", 1, []interface{}{"message"}, "WARNING: message"},
+		{"error", 1, []interface{}{errors.New("errormsg")}, "WARNING: errormsg"},
+		{"value", 2, []interface{}{[]interface{}{"one", 2, "three", 4}}, "CRITICAL: [one 2 three 4]"},
+		{"errorf", 1, []interface{}{"%s %d %s %d", "one", 2, "three", 4}, "WARNING: one 2 three 4"},
+	}
+
+	for _, tt := range tests {
+		tt := tt
+		t.Run(tt.name, func(t *testing.T) {
+			ret := NewError(tt.crit, tt.fields...)
+			t.Run("Error", func(t *testing.T) {
+				if got := ret.Error(); got != tt.message {
+					t.Errorf("NewError.Error() = %v, want %v", got, tt.message)
+				}
+			})
+			t.Run("Exit", func(t *testing.T) {
+				if tt.crit != ret.criticality {
+					t.Errorf("NewError.criticality = %d, want %d", ret.criticality, tt.crit)
+				}
+			})
+		})
+	}
+}
