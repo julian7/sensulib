@@ -11,6 +11,10 @@ Added:
 
 * New error API: `NewError`, and derivatives (`Ok()`, `Warn()`, `Crit()`, `Unknown()`) can take multiple arguments instead of a single error: single string, single value (printed with %v), or `fmt.Errorf()` arguments
 
+Changed:
+
+* Switched default branch to "main"
+
 ## [v0.3.0] - Jul 3, 2020
 
 Added:
