@@ -14,6 +14,8 @@ Added:
 Changed:
 
 * Switched default branch to "main"
+* Update dependencies, switch to go 1.17
+* Allow ARM versions to be selected for Sensu assets
 
 ## [v0.3.0] - Jul 3, 2020
 

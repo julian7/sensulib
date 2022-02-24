@@ -127,5 +127,11 @@ func (mod *Asset) summarize(art *ctx.Artifact, url string) (*BuildSpec, error) {
 		},
 	}
 
+	if art.OS == "linux" && art.Arch == "arm" && art.ArmVersion > 0 {
+		build.Filters = append(build.Filters,
+			fmt.Sprintf("entity.system.arm_version == %d", art.ArmVersion),
+		)
+	}
+
 	return build, nil
 }
