@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+No changes so far.
+
+## [v0.4.0] - Feb 27, 2022
+
 Added:
 
 * New error API: `NewError`, and derivatives (`Ok()`, `Warn()`, `Crit()`, `Unknown()`) can take multiple arguments instead of a single error: single string, single value (printed with %v), or `fmt.Errorf()` arguments
@@ -72,6 +76,7 @@ Fixes:
 Initial release.
 
 [Unreleased]: https://github.com/julian7/sensulib
+[v0.4.0]: https://github.com/julian7/sensulib/releases/tag/v0.4.0
 [v0.3.0]: https://github.com/julian7/sensulib/releases/tag/v0.3.0
 [v0.2.2]: https://github.com/julian7/sensulib/releases/tag/v0.2.2
 [v0.2.1]: https://github.com/julian7/sensulib/releases/tag/v0.2.1
