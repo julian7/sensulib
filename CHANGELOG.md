@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+No changes so far.
+
+## [v0.4.1] - Feb 27, 2022
+
 Changed:
 
 - Updated goshipdone dependency to v0.6.0 to support ARM version filters
@@ -82,6 +86,7 @@ Fixes:
 Initial release.
 
 [Unreleased]: https://github.com/julian7/sensulib
+[v0.4.1]: https://github.com/julian7/sensulib/releases/tag/v0.4.1
 [v0.4.0]: https://github.com/julian7/sensulib/releases/tag/v0.4.0
 [v0.3.0]: https://github.com/julian7/sensulib/releases/tag/v0.3.0
 [v0.2.2]: https://github.com/julian7/sensulib/releases/tag/v0.2.2
