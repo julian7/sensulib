@@ -4,7 +4,7 @@ go 1.17
 
 require (
 	github.com/go-test/deep v1.0.8
-	github.com/julian7/goshipdone v0.5.0
+	github.com/julian7/goshipdone v0.6.0
 	github.com/spf13/cobra v1.3.0
 	gopkg.in/yaml.v3 v3.0.0-20210107192922-496545a6307b
 )
@@ -30,5 +30,3 @@ require (
 	google.golang.org/appengine v1.6.7 // indirect
 	google.golang.org/protobuf v1.27.1 // indirect
 )
-
-replace github.com/julian7/goshipdone => ../goshipdone

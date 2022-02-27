@@ -7,7 +7,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-No changes so far.
+Changed:
+
+- Updated goshipdone dependency to v0.6.0 to support ARM version filters
+
+Fixed:
+
+- Removed `replace` in `go.mod` used in development
 
 ## [v0.4.0] - Feb 27, 2022
 
